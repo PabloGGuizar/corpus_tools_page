@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <title>Corpus Tools</title>
+    </head>
+    <body>
+        <div class="container bg-info bg-gradient p-3">
+            <h1 class="display-2">Corpus Tools</h1>
+            <div class="container">
+              <div class="row">
+                <div class="mb-3 mt-3 col-3">
+                  <p>Corpus Tools is a simple NPM package for performing corpus linguistic analysis. This package includes the next tools:</p>
+                  <ul>
+                    <li>Tokenizer Tool</li>
+                    <li>Concordance Tool</li>
+                    <li>N-Gram and Clusters Tools</li>
+                  </ul>
+                </div>
+                <div class="mb-3 mt-3 col-9">
+                    <label for="text" class="form-label">Enter the text to analyze:</label>
+                    <textarea id="text" class="form-control" rows="15">Colorless green ideas sleep furiously.</textarea>
+                </div>
+              </div>
+            </div>
+            <h4>Results:</h4>
+            <div class="container  bg-light p-3 border rounded">
+              <div id="res" class="row">
+              </div>
+            </div>
+            <h3 class="mt-3">Tools</h3>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Tokenizer
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="tokens" id="tokens" name="tokenizer">
+                            <label class="form-check-label" for="tokens">
+                                List of tokens
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="types" id="types" name="tokenizer">
+                            <label class="form-check-label" for="types">
+                                Types frecuency
+                            </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="richness" id="richness" name="tokenizer">
+                          <label class="form-check-label" for="richnes">
+                              Lexical Richness
+                          </label>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button id="btn-tokens" type="button" class="btn btn-primary">Tokenizer</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Concordance
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Word to search:</label>
+                        <input type="text" class="form-control" id="word" placeholder="Enter word to search">
+                      </div>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button id="btn-concordance" type="button" class="btn btn-primary">Search</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      N-Grams/Clusters
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse m-3" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" value="bigram" name="n-grams" id="boigram" checked>
+                      <label class="form-check-label" for="bigram">
+                        2-gram
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" value="trigram" name="n-grams" id="trigram">
+                      <label class="form-check-label" for="trigram">
+                        3-gram
+                      </label>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button id="btn-ngram" type="button" class="btn btn-primary">Search</button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+        </div>
+
+        <script type="module" src="./app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    </body>
+</html>
